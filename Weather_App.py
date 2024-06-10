@@ -14,9 +14,9 @@ print(r.text)
 wdic=json.loads(r.text)
 g=wdic["current"]["temp_c"]
 h="Temperature of "+city +"at current position is "+ str(g) 
-print(city)
-print(g)
+print(city)  #Print the name of city
+print(g) # print temperature 
 fh=gTTS(h,lang='en')
 fh.save('weather.mp3')
 playsound('weather.mp3')
-os.remove('weather.mp3')
+os.remove('weather.mp3')  #everytime it is created new and remove earlier one
